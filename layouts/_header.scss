@@ -1,0 +1,16 @@
+// Header //
+.header {
+    display: flex;
+    justify-content: space-around;
+    
+    &-menu {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 5%;
+        & h1 {
+        
+            font-family: $font-title;
+    }
+}
+}

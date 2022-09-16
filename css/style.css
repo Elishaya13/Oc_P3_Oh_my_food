@@ -1,0 +1,134 @@
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.logo-title {
+  font-family: "Shrikhand", cursive;
+}
+
+section {
+  border: 1px solid rgb(179, 179, 136);
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  width: 375px;
+  margin: auto;
+}
+@media (min-width: 768px) {
+  body {
+    width: 768px;
+  }
+}
+@media (min-width: 992px) {
+  body {
+    width: 1200px;
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 5%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-around;
+}
+.header-menu {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5%;
+}
+.header-menu h1 {
+  font-family: "Shrikhand", cursive;
+}
+
+.btn-fct {
+  width: 80%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 10px;
+  -webkit-box-shadow: 3px 3px 12px 0px #000000;
+  box-shadow: 3px 3px 12px 0px #000000;
+}
+.btn-fct i {
+  width: 5%;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.section-search {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.section-search__location {
+  background-color: #e9e9e9;
+  display: flex;
+  justify-content: center;
+  gap: 5%;
+}
+.section-search__info {
+  text-align: center;
+  background-color: #F6F6F6;
+  flex-direction: column;
+}
+.section-search__info button {
+  border-radius: 15px;
+}
+
+.section-fonction {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.section-fonction h2 {
+  padding-right: 45%;
+}
+
+.section-restaurant {
+  height: 1000px;
+}
+
+.resto-card {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px 5px #000000;
+}
+.resto-card img {
+  border-radius: 10px;
+  width: 100%;
+  object-fit: cover;
+}
+
+footer {
+  background-color: #353535;
+  color: white;
+  height: 200px;
+}
+footer a {
+  color: white;
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=style.css.map */

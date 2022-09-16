@@ -1,0 +1,15 @@
+footer {
+    background-color: #353535;
+    color: white;
+    height: 200px;
+    
+    & a {
+        color: white;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    }
+    
+}

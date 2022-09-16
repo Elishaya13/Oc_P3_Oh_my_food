@@ -1,0 +1,16 @@
+.btn-fct {
+    width: 80%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 10px;
+    -webkit-box-shadow: 3px 3px 12px 0px #000000; 
+box-shadow: 3px 3px 12px 0px #000000;
+    & i {
+        width: 5%;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+}
