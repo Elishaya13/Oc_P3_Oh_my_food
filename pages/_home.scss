@@ -44,35 +44,78 @@
     }
 }
 .section-fonction {
-    height: 450px;
+    height: 430px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    padding-bottom: 8%;
+    
     & h2 {
-        padding-right: 45%;
+        width: 90%;
+        
     }
 
 }
 .section-restaurant {
     
-   height: 1000px;
-   
+   height: 1250px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: .5%;
+   background-color: $background-color;
+   & h2 {
+    width: 90%;
+    margin-top: 15%;
+    margin-bottom: 5%;
+
+   }
+
 }
 .resto-card {
-    width: 100%;
-    
-    border-radius: 10px;
+    width: 90%;
+    height: 250px;
+    border-radius: 15px;
     box-shadow: $box-shadow;
-    & a {
-        // width: 100%;
-        // height: 100%;
-        // display: block;
-        // z-index: 1;
-    }
+    margin-bottom: 5%;
+    
     & img {
-        border-radius: 10px;
+        border-radius: 15px 15px 0 0;
         width: 100%;
+        height: 70%;
         object-fit: cover;
+    }
+    &__footer {
+        height: 30%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: white;
+        border-radius: 0 0 15px 15px;
+        &__txt {
+            width: 80%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 5px;
+            
+            & p {
+                font-weight: $font-weight-medium;
+                font-size: $font-size-medmore;
+            }
+        }
+        &__btn button {
+            width: 20%;
+            height: 100%;
+            border: none;
+            background-color: white;
+            font-size: 24px;
+            
+            
+        }
+
     }
 
 

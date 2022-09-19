@@ -1,18 +1,26 @@
 .btn-fct {
-    width: 80%;
-    height: 50px;
+    width: 90%;
+    height: 72px;
+    margin-left: 8%;
+    margin-right: 6%;
+    background-color: $background-color;
+    font-weight: $font-weight-medium;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    border-radius: 10px;
+    border-radius: 25px;
+    margin-top: 6%;
     box-shadow: $box-shadow;
     -webkit-box-shadow: $box-shadow; 
     -moz-box-shadow: $box-shadow;
     
     & i {
         width: 5%;
-        margin-left: 20px;
+        margin-left: 35px;
         margin-right: 20px;
+        color: grey;
+        font-size: 18px;
+        
     }
 
 }
@@ -30,3 +38,4 @@
     -moz-box-shadow: $box-shadow;
     
     }
+    
