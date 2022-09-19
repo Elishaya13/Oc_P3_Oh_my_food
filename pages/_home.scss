@@ -6,23 +6,45 @@
     flex-direction: column;
     width: 100%;
     &__location {
+        height: 50px;
         background-color: darken(#F6F6F6,5%);
+        font-weight: $font-weight-medium;
         display: flex;
         justify-content: center;
+        align-items: center;
         gap: 5%;
+        & span {
+            padding-right: 10%;
+            font-size: $font-size-medium;
+        }
+        
     }
     &__info {
-       
+        height: 280px;
         text-align: center;
         background-color: $background-color;
-        
+        display: flex;
         flex-direction: column;
-        & button {
-            border-radius: 15px;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 5%;
+        
+        & h2 {
+            width: 70%;
+            font-weight: bold;
         }
+        & p {
+            width: 90%;
+            font-size: $font-size-medmore;
+            opacity: 0.75;
+            padding: 4% 0 7% 0;
+        }
+        
+        
     }
 }
 .section-fonction {
+    height: 450px;
     display: flex;
     flex-direction: column;
     align-items: center;

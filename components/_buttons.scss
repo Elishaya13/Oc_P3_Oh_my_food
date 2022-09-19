@@ -5,8 +5,10 @@
     align-items: center;
     justify-content: flex-start;
     border-radius: 10px;
-    -webkit-box-shadow: 3px 3px 12px 0px #000000; 
-box-shadow: 3px 3px 12px 0px #000000;
+    box-shadow: $box-shadow;
+    -webkit-box-shadow: $box-shadow; 
+    -moz-box-shadow: $box-shadow;
+    
     & i {
         width: 5%;
         margin-left: 20px;
@@ -14,3 +16,17 @@ box-shadow: 3px 3px 12px 0px #000000;
     }
 
 }
+.btn-search {
+    width: 220px;
+    height: 50px;
+    border-radius: 24px;
+    border: none;
+    font-size: $font-size-medium;
+    color: white;
+    background: $secondary-color;
+    background: linear-gradient(180deg, $secondary-color 0%, $primary-color 100%);
+    box-shadow: $box-shadow;
+    -webkit-box-shadow: $box-shadow;
+    -moz-box-shadow: $box-shadow;
+    
+    }
