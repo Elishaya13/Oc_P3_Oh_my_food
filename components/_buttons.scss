@@ -11,19 +11,20 @@
     border-radius: 25px;
     margin-top: 6%;
     box-shadow: $box-shadow;
-    -webkit-box-shadow: $box-shadow; 
+    -webkit-box-shadow: $box-shadow;
     -moz-box-shadow: $box-shadow;
-    
+
     & i {
         width: 5%;
         margin-left: 35px;
         margin-right: 20px;
         color: grey;
         font-size: 18px;
-        
+
     }
 
 }
+
 .btn-search {
     width: 220px;
     height: 50px;
@@ -36,6 +37,21 @@
     box-shadow: $box-shadow;
     -webkit-box-shadow: $box-shadow;
     -moz-box-shadow: $box-shadow;
-    
-    }
-    
+
+}
+// Icone Button Heart
+
+.fa-heart {
+    cursor: pointer;
+}
+
+.fa-heart::before {
+    background-color: white;
+    transition: color 1s ease-out;
+}
+
+.fa-heart:hover::before {
+   
+    font-weight: bold;
+
+}
