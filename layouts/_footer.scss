@@ -1,11 +1,11 @@
 footer {
     background-color: #353535;
     color: white;
-    height: 200px;
+    height: 12.5em;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     & p {
         width: 80%;
         font-size: $font-size-medmore;
@@ -23,9 +23,9 @@ footer {
             font-size: 1em;
             color: white;
         text-decoration: none;
-        transition: all 0.5s ease-in-out;
+        transition: all 0.2s ease-in-out;
         &:hover {
-            opacity: 0.8;
+            color: $tertiary-color;
             cursor: pointer;
         }
             & i{

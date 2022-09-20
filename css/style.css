@@ -46,7 +46,6 @@ h2 {
 
 body {
   width: 375px;
-  height: 2263px;
   margin: auto;
 }
 @media (min-width: 768px) {
@@ -85,6 +84,26 @@ main {
   font-family: "Shrikhand", cursive;
 }
 
+.btn-search {
+  width: 220px;
+  height: 50px;
+  border-radius: 24px;
+  border: none;
+  font-size: 1em;
+  color: white;
+  background: #FF79DA;
+  background: linear-gradient(180deg, #FF79DA 0%, #9356DC 100%);
+  box-shadow: 0px 7px 11px 1px rgb(207, 205, 207);
+  -webkit-box-shadow: 0px 7px 11px 1px rgb(207, 205, 207);
+  -moz-box-shadow: 0px 7px 11px 1px rgb(207, 205, 207);
+  transition: 0.5s ease-in-out;
+}
+.btn-search:hover {
+  cursor: pointer;
+  filter: brightness(1.1);
+  box-shadow: 0px 7px 11px 2px rgb(147, 146, 146);
+}
+
 .btn-fct {
   width: 85%;
   height: 72px;
@@ -101,6 +120,7 @@ main {
   -webkit-box-shadow: 0px 7px 11px 1px rgb(207, 205, 207);
   -moz-box-shadow: 0px 7px 11px 1px rgb(207, 205, 207);
   position: relative;
+  transition: 0.3s ease-in-out;
 }
 .btn-fct span {
   position: absolute;
@@ -124,20 +144,6 @@ main {
 }
 .btn-fct:hover i {
   color: #9356DC;
-}
-
-.btn-search {
-  width: 220px;
-  height: 50px;
-  border-radius: 24px;
-  border: none;
-  font-size: 1em;
-  color: white;
-  background: #FF79DA;
-  background: linear-gradient(180deg, #FF79DA 0%, #9356DC 100%);
-  box-shadow: 0px 7px 11px 1px rgb(207, 205, 207);
-  -webkit-box-shadow: 0px 7px 11px 1px rgb(207, 205, 207);
-  -moz-box-shadow: 0px 7px 11px 1px rgb(207, 205, 207);
 }
 
 .section-search {
@@ -192,7 +198,6 @@ main {
 }
 
 .section-restaurant {
-  height: 1250px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -207,10 +212,12 @@ main {
 
 .resto-card {
   width: 90%;
-  height: 250px;
+  height: 15.6em;
   border-radius: 15px;
   box-shadow: 0px 7px 11px 1px rgb(207, 205, 207);
   margin-bottom: 5%;
+  display: flex;
+  flex-direction: column;
   position: relative;
 }
 .resto-card a {
@@ -223,6 +230,26 @@ main {
   width: 100%;
   height: 70%;
   object-fit: cover;
+}
+.resto-card .new {
+  width: 5em;
+  height: 2em;
+  font-weight: bold;
+  font-size: 0.8em;
+  padding: 0.6em;
+  display: table;
+  text-align: center;
+  border-radius: 3px;
+  background-color: #99E2D0;
+  color: #299077;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(-15%, 50%);
+}
+.resto-card .new span {
+  vertical-align: middle;
+  display: table-cell;
 }
 .resto-card__footer {
   height: 30%;
@@ -277,11 +304,11 @@ main {
 footer {
   background-color: #353535;
   color: white;
-  height: 200px;
+  height: 12.5em;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 footer p {
   width: 80%;
@@ -301,10 +328,10 @@ footer div a {
   font-size: 1em;
   color: white;
   text-decoration: none;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 footer div a:hover {
-  opacity: 0.8;
+  color: #99E2D0;
   cursor: pointer;
 }
 footer div a i {
