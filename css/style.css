@@ -64,7 +64,7 @@ main {
 }
 
 .btn-fct {
-  width: 90%;
+  width: 85%;
   height: 72px;
   margin-left: 8%;
   margin-right: 6%;
@@ -78,6 +78,17 @@ main {
   box-shadow: 0px 7px 11px 1px rgb(207, 205, 207);
   -webkit-box-shadow: 0px 7px 11px 1px rgb(207, 205, 207);
   -moz-box-shadow: 0px 7px 11px 1px rgb(207, 205, 207);
+  position: relative;
+}
+.btn-fct span {
+  position: absolute;
+  top: 13%;
+  left: 0;
+  background-color: #9356DC;
+  color: white;
+  border-radius: 50%;
+  padding: 5px 10px;
+  transform: translate(-50%, 50%);
 }
 .btn-fct i {
   width: 5%;
@@ -85,6 +96,12 @@ main {
   margin-right: 20px;
   color: grey;
   font-size: 18px;
+}
+.btn-fct:hover {
+  background-color: #f2eafb;
+}
+.btn-fct:hover i {
+  color: #9356DC;
 }
 
 .btn-search {

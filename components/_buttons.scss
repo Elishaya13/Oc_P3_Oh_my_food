@@ -1,5 +1,5 @@
 .btn-fct {
-    width: 90%;
+    width: 85%;
     height: 72px;
     margin-left: 8%;
     margin-right: 6%;
@@ -13,6 +13,17 @@
     box-shadow: $box-shadow;
     -webkit-box-shadow: $box-shadow;
     -moz-box-shadow: $box-shadow;
+    position: relative;
+    & span {
+        position: absolute;
+        top: 13%;
+        left: 0;
+        background-color: $primary-color;
+        color: white;
+        border-radius: 50%;
+        padding: 5px 10px;
+        transform: translate(-50%, 50%);
+    }
 
     & i {
         width: 5%;
@@ -21,6 +32,12 @@
         color: grey;
         font-size: 18px;
 
+    }
+    &:hover {
+        background-color: lighten($primary-color, 35%);
+        & i {
+            color: $primary-color;
+        }
     }
 
 }
