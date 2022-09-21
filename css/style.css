@@ -74,14 +74,30 @@ main {
   z-index: 2;
   box-shadow: 0px 0px 8px 0px rgb(184, 182, 182);
 }
+@media (max-width: 768px) {
+  .header {
+    position: sticky;
+    top: 0;
+    background-color: white;
+  }
+}
 .header-menu {
+  width: 100%;
   display: flex;
+  flex: 2;
   align-items: center;
-  justify-content: flex-start;
-  gap: 5%;
+  box-shadow: none;
+  padding-right: 1em;
 }
 .header-menu h1 {
   font-family: "Shrikhand", cursive;
+}
+.header-menu button {
+  flex: 1;
+  background-color: white;
+  font-size: 20px;
+  padding-left: 1em;
+  border: none;
 }
 
 .btn-search {
@@ -109,7 +125,7 @@ main {
   height: 72px;
   margin-left: 8%;
   margin-right: 6%;
-  background-color: #F6F6F6;
+  background-color: #F5F5F5;
   font-weight: 600;
   display: flex;
   align-items: center;
@@ -146,6 +162,48 @@ main {
   color: #9356DC;
 }
 
+.resto-card__heart .full-heart {
+  opacity: 0;
+  background: linear-gradient(283deg, #FF79DA 0%, #9356DC 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translate(-70%, -100%);
+  transition: 1.5s ease-out;
+}
+.resto-card__heart .empty-heart {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translate(-70%, -100%);
+  transition: 0.5s ease-in-out;
+}
+.resto-card__heart:hover {
+  cursor: pointer;
+}
+.resto-card__heart:hover .empty-heart {
+  opacity: 0;
+}
+.resto-card__heart:hover .full-heart {
+  opacity: 100%;
+}
+.resto-card__heart.menu__heart {
+  width: 10%;
+  top: 0;
+  bottom: 0;
+  transform: translate(80%, 0%);
+}
+.resto-card__heart.menu__heart .full-heart {
+  transform: translate(-25%, -23%);
+  font-size: 30px;
+}
+.resto-card__heart.menu__heart .empty-heart {
+  transform: translate(-25%, -23%);
+  font-size: 30px;
+}
+
 .section-search {
   display: flex;
   flex-direction: column;
@@ -167,7 +225,7 @@ main {
 .section-search__info {
   height: 280px;
   text-align: center;
-  background-color: #F6F6F6;
+  background-color: #F5F5F5;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -202,7 +260,7 @@ main {
   flex-direction: column;
   align-items: center;
   gap: 0.5%;
-  background-color: #F6F6F6;
+  background-color: #F5F5F5;
 }
 .section-restaurant h2 {
   width: 90%;
@@ -271,32 +329,67 @@ main {
   font-weight: 600;
   font-size: 1.125em;
 }
-.resto-card__heart .full-heart {
-  opacity: 0;
-  background: linear-gradient(283deg, #FF79DA 0%, #9356DC 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  transform: translate(-70%, -100%);
-  transition: 1.5s ease-out;
+
+.menu__wrapper {
+  background-color: #F5F5F5;
+  position: relative;
 }
-.resto-card__heart .empty-heart {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  transform: translate(-70%, -100%);
-  transition: 0.5s ease-in-out;
+
+.menu__header {
+  background-color: #F5F5F5;
+  border-radius: 45px 45px 0 0;
+  padding-top: 2em;
+  display: flex;
+  transform: translateY(-50%);
 }
-.resto-card__heart:hover {
-  cursor: pointer;
+.menu__header h1 {
+  font-family: "Shrikhand", cursive;
+  font-size: 28px;
+  padding-left: 1em;
 }
-.resto-card__heart:hover .empty-heart {
-  opacity: 0;
+
+.menu__body {
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.resto-card__heart:hover .full-heart {
-  opacity: 100%;
+
+.menu-card {
+  border: 1px solid green;
+  width: 90%;
+  height: 18.75em;
+  margin-bottom: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.menu-card p {
+  height: 15%;
+}
+.menu-card article {
+  border: 1px solid yellowgreen;
+  background-color: white;
+  border-radius: 15px;
+  width: 95%;
+}
+.menu-card__content {
+  border: 1px solid pink;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.menu-card__content p {
+  font-weight: bold;
+}
+.menu-card__price {
+  font-weight: bold;
+}
+.menu-card__select {
+  background-color: #99E2D0;
+  visibility: collapse;
 }
 
 footer {
