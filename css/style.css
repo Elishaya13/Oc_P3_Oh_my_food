@@ -124,13 +124,13 @@ main {
 }
 .btn-fct span {
   position: absolute;
-  top: 13%;
+  top: 0;
   left: 0;
   background-color: #9356DC;
   color: white;
   border-radius: 50%;
   padding: 5px 10px;
-  transform: translate(-50%, 50%);
+  transform: translate(-50%, 80%);
 }
 .btn-fct i {
   width: 5%;
@@ -271,33 +271,31 @@ main {
   font-weight: 600;
   font-size: 1.125em;
 }
-.resto-card .heart {
-  width: 50px;
-  height: 50px;
-}
-.resto-card .heart .full-heart {
+.resto-card__heart .full-heart {
   opacity: 0;
-  background: linear-gradient(180deg, #FF79DA 0%, #9356DC 100%);
+  background: linear-gradient(283deg, #FF79DA 0%, #9356DC 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   position: absolute;
   bottom: 0;
   right: 0;
   transform: translate(-70%, -100%);
+  transition: 1.5s ease-out;
 }
-.resto-card .heart .empty-heart {
+.resto-card__heart .empty-heart {
   position: absolute;
   bottom: 0;
   right: 0;
   transform: translate(-70%, -100%);
+  transition: 0.5s ease-in-out;
 }
-.resto-card .heart:hover {
+.resto-card__heart:hover {
   cursor: pointer;
 }
-.resto-card .heart:hover .empty-heart {
-  visibility: collapse;
+.resto-card__heart:hover .empty-heart {
+  opacity: 0;
 }
-.resto-card .heart:hover .full-heart {
+.resto-card__heart:hover .full-heart {
   opacity: 100%;
 }
 
