@@ -394,6 +394,9 @@ main {
   opacity: 1;
   width: 60px;
 }
+.menu-card article:hover > .menu-card__select > span {
+  transform: rotate(360deg);
+}
 .menu-card__content {
   position: relative;
   max-width: 95%;
@@ -436,9 +439,12 @@ main {
   width: 0px;
   opacity: 0;
   transition: all 0.6s ease-in-out;
+  transform: rotate(0);
 }
 .menu-card__select > span {
   color: white;
+  transform: rotate(-90deg);
+  transition: transform 0.7s ease-in-out;
 }
 
 .menu__footer {
