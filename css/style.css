@@ -350,41 +350,38 @@ main {
 
 .menu__body {
   border: 1px solid red;
-  display: flex;
-  flex-direction: column;
   align-items: center;
 }
 
 .menu-card {
   border: 1px solid green;
-  width: 90%;
   margin-bottom: 2em;
-  display: block;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+}
+.menu-card > p {
+  padding-left: 1.2rem;
 }
 .menu-card article {
-  border: 1px solid yellowgreen;
-  position: relative;
   background-color: white;
   border-radius: 15px;
-  width: 90%;
   display: flex;
   cursor: pointer;
   overflow: hidden;
   margin: 1rem;
 }
 .menu-card article:hover > .menu-card__select {
-  flex: 1;
+  flex: 2;
   transform: translateX(0);
-  visibility: visible;
+  opacity: 1;
   width: 60px;
 }
 .menu-card__content {
   position: relative;
-  border: 1px solid pink;
-  width: 95%;
+  max-width: 95%;
+  height: 60px;
+  padding: 0.56rem;
+  display: flex;
+  gap: 3%;
+  flex: 10;
   flex-direction: column;
   justify-content: flex-end;
   overflow: hidden;
@@ -392,27 +389,36 @@ main {
 }
 .menu-card__content p {
   font-weight: bold;
+  font-size: 1.1rem;
+  letter-spacing: 0.02rem;
 }
 .menu-card__txt-price {
-  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  transition: all 1s;
-  transform: translateX(0);
+  align-items: center;
+}
+.menu-card__txt-price p {
+  padding-left: 0.3rem;
+}
+.menu-card__txt-price span {
+  font-size: 0.9em;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .menu-card__select {
   background-color: #99E2D0;
   border-radius: 0 15px 15px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex: 0;
   width: 0px;
-  visibility: collapse;
-  transform: translateX(50px);
-  transition: all 1s;
+  opacity: 0;
+  transition: all 0.6s ease-in-out;
 }
 .menu-card__select > span {
   color: white;
-  padding: 10px;
 }
 
 footer {
