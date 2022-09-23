@@ -458,11 +458,11 @@ main {
 
 @keyframes transition {
   0% {
-    margin-top: -10px;
+    margin-bottom: 2rem;
     opacity: 0;
   }
   100% {
-    margin-top: 0;
+    margin-bottom: 0;
     opacity: 1;
   }
 }
