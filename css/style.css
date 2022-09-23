@@ -387,6 +387,8 @@ main {
   cursor: pointer;
   overflow: hidden;
   margin: 1rem;
+  opacity: 0;
+  animation: transition 1.5s ease-out 0.8s forwards;
 }
 .menu-card article:hover > .menu-card__select {
   flex: 2;
@@ -454,6 +456,16 @@ main {
   padding-bottom: 3.7rem;
 }
 
+@keyframes transition {
+  0% {
+    margin-top: -10px;
+    opacity: 0;
+  }
+  100% {
+    margin-top: 0;
+    opacity: 1;
+  }
+}
 footer {
   background-color: #353535;
   color: white;
