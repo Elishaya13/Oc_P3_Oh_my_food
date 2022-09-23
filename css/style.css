@@ -62,7 +62,6 @@ body {
 main {
   display: flex;
   flex-direction: column;
-  gap: 5%;
 }
 
 .header {
@@ -73,6 +72,9 @@ main {
   position: relative;
   z-index: 2;
   box-shadow: 0px 0px 8px 0px rgb(184, 182, 182);
+}
+.header h1 {
+  margin-top: 0.8rem;
 }
 @media (max-width: 768px) {
   .header {
@@ -261,6 +263,7 @@ main {
   align-items: center;
   gap: 0.5%;
   background-color: #F5F5F5;
+  padding-bottom: 3.7rem;
 }
 .section-restaurant h2 {
   width: 90%;
@@ -324,10 +327,16 @@ main {
   flex-direction: column;
   justify-content: center;
   gap: 5px;
+  margin-right: 8%;
 }
 .resto-card__footer__txt p {
   font-weight: 600;
   font-size: 1.125em;
+}
+
+.menu__main img {
+  height: 260px;
+  object-fit: cover;
 }
 
 .menu__wrapper {
@@ -349,21 +358,32 @@ main {
 }
 
 .menu__body {
-  border: 1px solid red;
   align-items: center;
 }
 
 .menu-card {
-  border: 1px solid green;
   margin-bottom: 2em;
+  position: relative;
 }
 .menu-card > p {
   padding-left: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+.menu-card > p::after {
+  content: "";
+  position: absolute;
+  background-color: #99E2D0;
+  width: 10%;
+  height: 3px;
+  top: 1.5rem;
+  left: 0;
+  transform: translateX(1.2rem);
 }
 .menu-card article {
+  display: flex;
   background-color: white;
   border-radius: 15px;
-  display: flex;
+  box-shadow: 0px 7px 11px 1px rgb(207, 205, 207);
   cursor: pointer;
   overflow: hidden;
   margin: 1rem;
@@ -419,6 +439,13 @@ main {
 }
 .menu-card__select > span {
   color: white;
+}
+
+.menu__footer {
+  display: flex;
+  justify-content: center;
+  padding-top: 1rem;
+  padding-bottom: 3.7rem;
 }
 
 footer {
