@@ -98,19 +98,30 @@
         }
     }
     &.menu__heart {
-        width: 10%;
-        top: 0;
-        bottom: 0;
-        transform: translate(80%,0%);
+        // position: absolute;
+        // right: 10%;
+        // top: -5%;
+        width: 20%;
+        display: flex;
+      
+        // transform: translate(100%,0%);
 
         & .full-heart {
         transform: translate(-25%, -23%);
         font-size: 30px;
+        right: 11%;
+        // transform: none;
+        // position: relative;
+       
         }
         
         & .empty-heart {
             transform: translate(-25%, -23%); 
             font-size: 30px;
+            right: 11%;
+            // transform: none;
+            // position: relative;
+           
            
         }
        

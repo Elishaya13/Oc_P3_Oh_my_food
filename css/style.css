@@ -40,8 +40,8 @@ a {
   text-decoration: none;
 }
 
-h2 {
-  letter-spacing: -0.8px;
+h3 {
+  font-size: 1.07em;
 }
 
 body {
@@ -85,21 +85,23 @@ main {
 }
 .header-menu {
   width: 100%;
-  display: flex;
-  flex: 2;
-  align-items: center;
   box-shadow: none;
-  padding-right: 1em;
 }
 .header-menu h1 {
   font-family: "Shrikhand", cursive;
+  flex: 3;
+  margin-right: 1.5rem;
+}
+.header-menu form {
+  flex: 1;
+  text-align: left;
+  margin-left: 1.5rem;
 }
 .header-menu button {
-  flex: 1;
   background-color: white;
-  font-size: 20px;
-  padding-left: 1em;
+  font-size: 22px;
   border: none;
+  margin-top: 0.8rem;
 }
 
 .btn-search {
@@ -192,18 +194,18 @@ main {
   opacity: 100%;
 }
 .resto-card__heart.menu__heart {
-  width: 10%;
-  top: 0;
-  bottom: 0;
-  transform: translate(80%, 0%);
+  width: 20%;
+  display: flex;
 }
 .resto-card__heart.menu__heart .full-heart {
   transform: translate(-25%, -23%);
   font-size: 30px;
+  right: 11%;
 }
 .resto-card__heart.menu__heart .empty-heart {
   transform: translate(-25%, -23%);
   font-size: 30px;
+  right: 11%;
 }
 
 .section-search {
@@ -237,6 +239,7 @@ main {
 .section-search__info h2 {
   width: 70%;
   font-weight: bold;
+  letter-spacing: -0.8px;
 }
 .section-search__info p {
   width: 90%;
@@ -255,6 +258,7 @@ main {
 }
 .section-fonction h2 {
   width: 90%;
+  letter-spacing: -0.8px;
 }
 
 .section-restaurant {
@@ -269,6 +273,7 @@ main {
   width: 90%;
   margin-top: 15%;
   margin-bottom: 5%;
+  letter-spacing: -0.8px;
 }
 
 .resto-card {
@@ -351,9 +356,9 @@ main {
   display: flex;
   transform: translateY(-50%);
 }
-.menu__header h1 {
+.menu__header h2 {
   font-family: "Shrikhand", cursive;
-  font-size: 28px;
+  font-size: 27px;
   padding-left: 1em;
 }
 
@@ -365,11 +370,12 @@ main {
   margin-bottom: 2em;
   position: relative;
 }
-.menu-card > p {
+.menu-card > h4 {
   padding-left: 1.2rem;
   margin-bottom: 1.2rem;
+  font-weight: 200;
 }
-.menu-card > p::after {
+.menu-card > h4::after {
   content: "";
   position: absolute;
   background-color: #99E2D0;
@@ -414,7 +420,6 @@ main {
 }
 .menu-card__content p {
   font-weight: bold;
-  font-size: 1.1rem;
   letter-spacing: 0.02rem;
 }
 .menu-card__txt-price {

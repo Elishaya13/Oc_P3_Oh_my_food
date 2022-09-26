@@ -18,22 +18,30 @@
     }
     
     &-menu {
-        width: 100%;
-        display: flex;
-        flex: 2;
-        align-items: center;
+        width: 100%;  
         box-shadow: none;
-        padding-right: 1em;
+        
+       
         & h1 {
             font-family: $font-title; 
+            flex: 3;
+            margin-right: 1.5rem;
             
-    }
+            
+        }
+        & form {
+           flex: 1;
+           text-align: left;
+           margin-left: 1.5rem;
+           
+           
+        }
     & button {
-        flex: 1;
+        
         background-color: white;
-        font-size: 20px;
-        padding-left: 1em;
+        font-size: 22px;
         border: none;
+        margin-top: 0.8rem;
        
         
     }
