@@ -54,16 +54,12 @@ h3 {
 
 
 body{
-    width: 375px;
+    width: 100vw;
     margin: auto;
-    
-    @media (min-width:$media-tab) {
-        width: 768px;
-    }
-    @media (min-width:$media-dsk) {
-        width: 1200px;
-    }
-
+    //Large Desktop
+    @media only screen and (min-width : 1500px) {
+        width: 80vw;
+    }     
 }
 main {
     display: flex;

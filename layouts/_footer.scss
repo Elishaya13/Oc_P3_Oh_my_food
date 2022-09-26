@@ -34,6 +34,46 @@ footer {
             }
         }
     }
+    @media only screen and (min-width : 768px) {
+        text-align: center;
+        & > p {
+            padding-top: 1%;
+            font-size:xx-large;
+        }
+        & > div {
+            flex-direction: row;
+            & > a {
+                gap:0%;
+                & > i {
+                    padding-right: 0.5rem;
+                }
+                
+            }
+           
+           
+        }
+    }
+    @media only screen and (min-width : 960px) {
+        text-align: center;
+      
+        & > div {
+            flex-direction: row;
+            align-items: flex-end;
+            justify-content: space-between;
+            padding-bottom: 3%;
+        
+            & > a {
+                flex-direction: column;
+                font-size: large;
+                & > i {
+                    padding-bottom: 10px;
+                }
+               
+            }
+        }
+        
+        
+    }
      
     
 }

@@ -45,17 +45,12 @@ h3 {
 }
 
 body {
-  width: 375px;
+  width: 100vw;
   margin: auto;
 }
-@media (min-width: 768px) {
+@media only screen and (min-width: 1500px) {
   body {
-    width: 768px;
-  }
-}
-@media (min-width: 992px) {
-  body {
-    width: 1200px;
+    width: 80vw;
   }
 }
 
@@ -76,7 +71,7 @@ main {
 .header h1 {
   margin-top: 0.8rem;
 }
-@media (max-width: 768px) {
+@media only screen and (max-width: 1023px) {
   .header {
     position: sticky;
     top: 0;
@@ -106,7 +101,7 @@ main {
 
 .btn-search {
   width: 220px;
-  height: 50px;
+  height: 20%;
   border-radius: 24px;
   border: none;
   font-size: 1em;
@@ -123,17 +118,22 @@ main {
   filter: brightness(1.1);
   box-shadow: 0px 7px 11px 2px rgb(147, 146, 146);
 }
+@media only screen and (min-width: 1244px) {
+  .btn-search {
+    border-radius: 30px;
+  }
+}
 
 .btn-fct {
   width: 85%;
-  height: 72px;
+  height: 18%;
   margin-left: 8%;
   margin-right: 6%;
   background-color: #F5F5F5;
   font-weight: 600;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   border-radius: 25px;
   margin-top: 6%;
   box-shadow: 0px 7px 11px 1px rgb(207, 205, 207);
@@ -142,28 +142,44 @@ main {
   position: relative;
   transition: 0.3s ease-in-out;
 }
-.btn-fct span {
+.btn-fct div {
   position: absolute;
-  top: 0;
-  left: 0;
+  left: -1rem;
   background-color: #9356DC;
   color: white;
   border-radius: 50%;
   padding: 5px 10px;
-  transform: translate(-50%, 80%);
 }
 .btn-fct i {
-  width: 5%;
-  margin-left: 35px;
-  margin-right: 20px;
   color: grey;
   font-size: 18px;
+  position: absolute;
+  left: 10%;
+}
+.btn-fct p {
+  text-align: center;
 }
 .btn-fct:hover {
   background-color: #f2eafb;
 }
 .btn-fct:hover i {
   color: #9356DC;
+}
+@media only screen and (min-width: 768px) {
+  .btn-fct {
+    width: 55%;
+    margin: 0;
+  }
+}
+@media only screen and (min-width: 960px) {
+  .btn-fct {
+    width: 40%;
+  }
+}
+@media only screen and (min-width: 1244px) {
+  .btn-fct {
+    width: 30%;
+  }
 }
 
 .resto-card__heart .full-heart {
@@ -172,16 +188,14 @@ main {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   position: absolute;
-  bottom: 0;
-  right: 0;
-  transform: translate(-70%, -100%);
+  bottom: 10%;
+  right: 8%;
   transition: 1.5s ease-out;
 }
 .resto-card__heart .empty-heart {
   position: absolute;
-  bottom: 0;
-  right: 0;
-  transform: translate(-70%, -100%);
+  bottom: 10%;
+  right: 8%;
   transition: 0.5s ease-in-out;
 }
 .resto-card__heart:hover {
@@ -236,16 +250,31 @@ main {
   align-items: center;
   padding-bottom: 5%;
 }
+@media only screen and (min-width: 1244px) {
+  .section-search__info {
+    padding: 0;
+  }
+}
 .section-search__info h2 {
   width: 70%;
   font-weight: bold;
   letter-spacing: -0.8px;
+}
+@media only screen and (min-width: 768px) {
+  .section-search__info h2 > br {
+    display: none;
+  }
 }
 .section-search__info p {
   width: 90%;
   font-size: 1.125em;
   opacity: 0.75;
   padding: 4% 0 7% 0;
+}
+@media only screen and (min-width: 1500px) {
+  .section-search__info p {
+    padding: 2% 0 3% 0;
+  }
 }
 
 .section-fonction {
@@ -259,6 +288,26 @@ main {
 .section-fonction h2 {
   width: 90%;
   letter-spacing: -0.8px;
+}
+@media only screen and (min-width: 768px) {
+  .section-fonction {
+    justify-content: space-around;
+  }
+  .section-fonction h2 {
+    text-align: center;
+  }
+}
+@media only screen and (min-width: 960px) {
+  .section-fonction {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+@media only screen and (min-width: 1244px) {
+  .section-fonction {
+    padding: 0 2% 0 2%;
+    height: 30vh;
+  }
 }
 
 .section-restaurant {
@@ -274,6 +323,17 @@ main {
   margin-top: 15%;
   margin-bottom: 5%;
   letter-spacing: -0.8px;
+}
+@media only screen and (min-width: 768px) {
+  .section-restaurant {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  .section-restaurant h2 {
+    text-align: center;
+    margin-top: 5%;
+  }
 }
 
 .resto-card {
@@ -337,6 +397,21 @@ main {
 .resto-card__footer__txt p {
   font-weight: 600;
   font-size: 1.125em;
+}
+@media only screen and (min-width: 768px) {
+  .resto-card {
+    width: 40%;
+  }
+}
+@media only screen and (min-width: 1244px) {
+  .resto-card {
+    width: 35%;
+  }
+}
+@media only screen and (min-width: 1500px) {
+  .resto-card {
+    max-width: 20%;
+  }
 }
 
 .menu__main img {
@@ -506,6 +581,42 @@ footer div a:hover {
 }
 footer div a i {
   font-size: 0.8em;
+}
+@media only screen and (min-width: 768px) {
+  footer {
+    text-align: center;
+  }
+  footer > p {
+    padding-top: 1%;
+    font-size: xx-large;
+  }
+  footer > div {
+    flex-direction: row;
+  }
+  footer > div > a {
+    gap: 0%;
+  }
+  footer > div > a > i {
+    padding-right: 0.5rem;
+  }
+}
+@media only screen and (min-width: 960px) {
+  footer {
+    text-align: center;
+  }
+  footer > div {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding-bottom: 3%;
+  }
+  footer > div > a {
+    flex-direction: column;
+    font-size: large;
+  }
+  footer > div > a > i {
+    padding-bottom: 10px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
