@@ -20,6 +20,7 @@
     &-menu {
         width: 100%;  
         box-shadow: none;
+
         
        
         & h1 {
@@ -36,6 +37,15 @@
            
            
         }
+        @media only screen and (min-width:768px) {
+             & h1 {
+                flex: 2;
+             }
+             & form {
+                flex: 1.2;
+             }
+        }
+
     & button {
         
         background-color: white;

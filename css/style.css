@@ -92,6 +92,14 @@ main {
   text-align: left;
   margin-left: 1.5rem;
 }
+@media only screen and (min-width: 768px) {
+  .header-menu h1 {
+    flex: 2;
+  }
+  .header-menu form {
+    flex: 1.2;
+  }
+}
 .header-menu button {
   background-color: white;
   font-size: 22px;
@@ -101,7 +109,7 @@ main {
 
 .btn-search {
   width: 220px;
-  height: 20%;
+  height: 7vh;
   border-radius: 24px;
   border: none;
   font-size: 1em;
@@ -117,6 +125,11 @@ main {
   cursor: pointer;
   filter: brightness(1.1);
   box-shadow: 0px 7px 11px 2px rgb(147, 146, 146);
+}
+@media only screen and (min-width: 768px) {
+  .btn-search {
+    height: 6vh;
+  }
 }
 @media only screen and (min-width: 1244px) {
   .btn-search {
@@ -207,19 +220,13 @@ main {
 .resto-card__heart:hover .full-heart {
   opacity: 100%;
 }
-.resto-card__heart.menu__heart {
-  width: 20%;
-  display: flex;
-}
-.resto-card__heart.menu__heart .full-heart {
-  transform: translate(-25%, -23%);
+.resto-card__heart.menu__heart .full-heart, .resto-card__heart.menu__heart .empty-heart {
   font-size: 30px;
-  right: 11%;
 }
-.resto-card__heart.menu__heart .empty-heart {
-  transform: translate(-25%, -23%);
-  font-size: 30px;
-  right: 11%;
+@media only screen and (min-width: 768px) {
+  .resto-card__heart.menu__heart .full-heart, .resto-card__heart.menu__heart .empty-heart {
+    right: 22%;
+  }
 }
 
 .section-search {
@@ -441,9 +448,30 @@ main {
   font-size: 27px;
   padding-left: 1em;
 }
+@media only screen and (min-width: 768px) {
+  .menu__header {
+    justify-content: space-around;
+  }
+}
 
 .menu__body {
   align-items: center;
+}
+@media only screen and (min-width: 768px) {
+  .menu__body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media only screen and (min-width: 960px) {
+  .menu__body {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 }
 
 .menu-card {
@@ -532,6 +560,16 @@ main {
   color: white;
   transform: rotate(-90deg);
   transition: transform 0.7s ease-in-out;
+}
+@media only screen and (min-width: 768px) {
+  .menu-card {
+    width: 70%;
+  }
+}
+@media only screen and (min-width: 960px) {
+  .menu-card {
+    width: 45%;
+  }
 }
 
 .menu__footer {
