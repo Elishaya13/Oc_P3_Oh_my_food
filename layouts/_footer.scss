@@ -1,81 +1,71 @@
 footer {
-    background-color: #353535;
-    color: white;
-    height: 12.5em;
+  background-color: #353535;
+  color: white;
+  height: 12.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  & p {
+    width: 80%;
+    font-size: $font-size-medmore;
+  }
+  & div {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    & p {
-        width: 80%;
-        font-size: $font-size-medmore;
+    justify-content: space-evenly;
+    width: 80%;
+    height: 70%;
+    & a {
+      display: flex;
+      align-items: center;
+      gap: 3%;
+      font-size: $font-size-medium;
+      color: white;
+      text-decoration: none;
+      transition: all 0.2s ease-in-out;
+      &:hover {
+        color: $tertiary-color;
+        cursor: pointer;
+      }
+      & i {
+        font-size: 0.8em;
+      }
     }
-    & div {
-        display: flex;
+  }
+  @media only screen and (min-width: 768px) {
+    text-align: center;
+    & > p {
+      padding-top: 1%;
+      font-size: xx-large;
+    }
+    & > div {
+      flex-direction: row;
+      & > a {
+        gap: 0%;
+        & > i {
+          padding-right: 0.5rem;
+        }
+      }
+    }
+  }
+  @media only screen and (min-width: 960px) {
+    text-align: center;
+
+    & > div {
+      flex-direction: row;
+      align-items: flex-end;
+      justify-content: space-between;
+      padding-bottom: 3%;
+
+      & > a {
         flex-direction: column;
-        justify-content: space-evenly;
-        width: 80%;
-        height: 70%;
-        & a {
-            display: flex;
-            align-items: center;
-            gap: 3%;
-            font-size: 1em;
-            color: white;
-        text-decoration: none;
-        transition: all 0.2s ease-in-out;
-        &:hover {
-            color: $tertiary-color;
-            cursor: pointer;
+        font-size: large;
+        & > i {
+          padding-bottom: 10px;
+          padding-right: 0;
         }
-            & i{
-                font-size: 0.8em;
-  
-                
-            }
-        }
+      }
     }
-    @media only screen and (min-width : 768px) {
-        text-align: center;
-        & > p {
-            padding-top: 1%;
-            font-size:xx-large;
-        }
-        & > div {
-            flex-direction: row;
-            & > a {
-                gap:0%;
-                & > i {
-                    padding-right: 0.5rem;
-                }
-                
-            }
-           
-           
-        }
-    }
-    @media only screen and (min-width : 960px) {
-        text-align: center;
-      
-        & > div {
-            flex-direction: row;
-            align-items: flex-end;
-            justify-content: space-between;
-            padding-bottom: 3%;
-        
-            & > a {
-                flex-direction: column;
-                font-size: large;
-                & > i {
-                    padding-bottom: 10px;
-                    padding-right:0;
-                }
-               
-            }
-        }
-        
-        
-    }
-     
-    
+  }
 }

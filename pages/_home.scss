@@ -1,208 +1,185 @@
 // section search //
 .section-search {
-    
+  display: flex;
+
+  flex-direction: column;
+  width: 100%;
+  &__location {
+    height: 50px;
+    background-color: darken(#f6f6f6, 5%);
+    font-weight: $font-weight-medium;
     display: flex;
-    
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+    & span {
+      padding-right: 10%;
+      font-size: $font-size-medium;
+    }
+  }
+  &__info {
+    height: 280px;
+    text-align: center;
+    background-color: $background-color;
+    display: flex;
     flex-direction: column;
-    width: 100%;
-    &__location {
-        height: 50px;
-        background-color: darken(#F6F6F6,5%);
-        font-weight: $font-weight-medium;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 5%;
-        & span {
-            padding-right: 10%;
-            font-size: $font-size-medium;
-        }
-        
-    }
-    &__info {
-        height: 280px;
-        text-align: center;
-        background-color: $background-color;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding-bottom: 5%;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5%;
 
-        @media only screen and (min-width : 1244px) {
-            padding: 0;
-        }
-        
-        & h2 {
-            width: 70%;
-            font-weight: bold;
-            letter-spacing: -0.8px;
-            //Responsiv tablet
-            @media only screen and (min-width : 768px){
-                & > br {
-                    display: none;
-                }
-
-            }
-           
-        }
-        & p {
-            width: 90%;
-            font-size: $font-size-medmore;
-            opacity: 0.75;
-            padding: 4% 0 7% 0;
-            @media only screen and (min-width : 1244px) {
-                padding: 2% 0 3% 0;
-                
-            }
-        }
-        
-        
+    @media only screen and (min-width: 1244px) {
+      padding: 0;
     }
+
+    & h2 {
+      width: 70%;
+      font-weight: bold;
+      letter-spacing: -0.8px;
+      //Responsiv
+      @media only screen and (min-width: 768px) {
+        & > br {
+          display: none;
+        }
+      }
+    }
+    & p {
+      width: 90%;
+      font-size: $font-size-medmore;
+      opacity: 0.75;
+      padding: 4% 0 7% 0;
+      @media only screen and (min-width: 1244px) {
+        padding: 2% 0 3% 0;
+      }
+    }
+  }
 }
 .section-fonction {
-    height: 430px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding-bottom: 8%;
-    
+  height: 430px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 8%;
+
+  & h2 {
+    width: 90%;
+    letter-spacing: -0.8px;
+  }
+  @media only screen and (min-width: 768px) {
+    justify-content: space-around;
     & h2 {
-        width: 90%;
-        letter-spacing: -0.8px;
-       
-        
+      text-align: center;
     }
-    @media only screen and (min-width : 768px){
-        justify-content: space-around;
-        & h2 {
-        text-align: center;
-        }
-    }
-    @media only screen and (min-width : 960px) {
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-    
-    @media only screen and (min-width : 1244px) {
-        padding: 0 2% 0 2%;
-        height: 30vh;
-       
-    }
+  }
+  @media only screen and (min-width: 960px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 
-
+  @media only screen and (min-width: 1244px) {
+    padding: 0 2% 0 2%;
+    height: 30vh;
+  }
 }
 .section-restaurant {
-    
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   gap: .5%;
-   background-color: $background-color;
-   padding-bottom: 3.7rem;
-   & h2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5%;
+  background-color: $background-color;
+  padding-bottom: 3.7rem;
+  & h2 {
     width: 90%;
     margin-top: 15%;
     margin-bottom: 5%;
-     letter-spacing: -0.8px;
-   
-
-   }
-   @media only screen and (min-width : 768px) {
+    letter-spacing: -0.8px;
+  }
+  @media only screen and (min-width: 768px) {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
     & h2 {
-        text-align: center;
-        margin-top: 5%;
+      text-align: center;
+      margin-top: 5%;
     }
-   }
-
+  }
 }
 .resto-card {
-    width: 90%;
-    height: 15.6em;
+  width: 90%;
+  height: 15.6em;
+  border-radius: 15px;
+  box-shadow: $box-shadow;
+  margin-bottom: 5%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  & a {
+    width: 100%;
+    height: 100%;
     border-radius: 15px;
-    box-shadow: $box-shadow;
-    margin-bottom: 5%;
+    position: absolute;
+    transition: all 0.2s;
+    &:hover {
+      box-shadow: $box-shadow-darken;
+    }
+  }
+
+  & img {
+    border-radius: 15px 15px 0 0;
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+  }
+  & .new {
+    width: 5em;
+    height: 2em;
+    font-weight: bold;
+    font-size: 0.8em;
+    padding: 0.6em;
+    display: table;
+    text-align: center;
+    border-radius: 3px;
+    background-color: $tertiary-color;
+    color: darken($tertiary-color, 38%);
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-15%, 50%);
+    & span {
+      vertical-align: middle;
+      display: table-cell;
+    }
+  }
+  &__footer {
+    height: 30%;
     display: flex;
-    flex-direction: column;
-    position: relative;
-    &  a {
-        width: 100%;
-        height: 100%;
-        border-radius: 15px;
-        position: absolute; 
-        transition: all 0.2s;
-        &:hover {
-            // filter: brightness(1.1);
-            box-shadow: $box-shadow-darken;
-        }
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    border-radius: 0 0 15px 15px;
+
+    &__txt {
+      width: 70%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      margin-right: 8%;
+
+      & p {
+        font-weight: $font-weight-medium;
+        font-size: $font-size-medmore;
+      }
     }
-    
-    & img {
-        border-radius: 15px 15px 0 0;
-        width: 100%;
-        height: 70%;
-        object-fit: cover;
-        
-    }
-    & .new {
-        width: 5em;
-        height: 2em;
-        font-weight: bold;
-        font-size: 0.8em;
-        padding: 0.6em;
-        display: table;
-        text-align: center;
-        border-radius: 3px;
-        background-color: $tertiary-color;
-        color: darken($tertiary-color,38%);
-        position: absolute;
-        top: 0;
-        right: 0;
-        transform: translate(-15% ,50%);
-        & span {
-            vertical-align: middle;
-            display: table-cell;
-        }
-        
-    }
-    &__footer {
-        height: 30%;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        background-color: white;
-        border-radius: 0 0 15px 15px;
-        
-        &__txt {
-            width: 70%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            gap: 5px;
-            margin-right: 8%;
-            
-            & p {
-                font-weight: $font-weight-medium;
-                font-size: $font-size-medmore;
-            }
-            
-        }
-       
-    }
-    @media only screen and (min-width : 768px) {
-        width: 40%;
-    }
-    @media only screen and (min-width : 1244px) {
-        width: 35%;
-    }
-    @media only screen and (min-width : 1500px) {
-        max-width: 20%;
-    }
-    
-     
+  }
+  @media only screen and (min-width: 768px) {
+    width: 40%;
+  }
+  @media only screen and (min-width: 1244px) {
+    width: 35%;
+  }
+  @media only screen and (min-width: 1500px) {
+    max-width: 20%;
+  }
 }

@@ -1,192 +1,183 @@
-.menu__main img{
-    height: 260px;
-    object-fit: cover;
+.menu__main img {
+  height: 260px;
+  object-fit: cover;
 }
 .menu__wrapper {
-    background-color: $background-color;
-    position: relative;
-    
+  background-color: $background-color;
+  position: relative;
 }
 .menu__header {
-    background-color: $background-color;
-    border-radius: 45px 45px 0 0;
-    padding-top: 2em;
-    display: flex;
-    transform: translateY(-50%);
+  background-color: $background-color;
+  border-radius: 45px 45px 0 0;
+  padding-top: 2em;
+  display: flex;
+  transform: translateY(-50%);
+  position: relative;
+  & h2 {
+    font-family: $font-title;
+    font-size: 27px;
+    padding-left: 1em;
+  }
+  @media only screen and (min-width: 768px) {
     & h2 {
-        font-family: $font-title;
-        font-size: 27px;
-        padding-left: 1em;
-    }  
-    @media only screen and (min-width:768px) {
-        justify-content: space-around;
-    } 
+      display: flex;
+      flex: 2;
+      justify-content: center;
+    }
+  }
+  @media only screen and (min-width: 960px) {
+    border-radius: 0;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    & h2 {
+      padding-left: 0;
+    }
+  }
+  @media only screen and (min-width: 1244px) {
+    & h2 {
+      justify-content: center;
+      flex: 28;
+    }
+  }
 }
 
 .menu__body {
-    align-items: center;   
+  align-items: center;
 
-    @media only screen and (min-width:768px) {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        
-    }
-    @media only screen and (min-width:960px) {
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        flex-wrap: wrap;
-        
-    }
+  @media only screen and (min-width: 768px) {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  @media only screen and (min-width: 960px) {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
 }
 
 .menu-card {
-    
-    margin-bottom: 2em;
+  margin-bottom: 2em;
+  position: relative;
+
+  & > h4 {
+    padding-left: 1.2em;
+    margin-bottom: 1.2em;
+    font-weight: 200;
+    &::after {
+      content: "";
+      position: absolute;
+      background-color: $tertiary-color;
+      width: 10%;
+      height: 3px;
+      top: 1.5em;
+      left: 0;
+      transform: translateX(1.2rem);
+    }
+  }
+
+  & article {
+    display: flex;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: $box-shadow;
+    cursor: pointer;
+    overflow: hidden;
+    margin: 1rem;
+    opacity: 0;
+    animation: transition 1.5s ease-out 0.8s forwards;
+
+    &:hover > .menu-card__select {
+      flex: 2;
+      transform: translateX(0);
+      opacity: 1;
+      width: 60px;
+      & > span {
+        transform: rotate(360deg);
+      }
+    }
+  }
+
+  &__content {
     position: relative;
-   
+    max-width: 95%;
+    height: 60px;
+    padding: 0.56rem;
+    display: flex;
+    gap: 3%;
+    flex: 10;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
+    white-space: nowrap;
 
-    & > h4 {
-        padding-left: 1.2rem;
-        margin-bottom: 1.2rem;
-        font-weight: 200;
-        &::after {
-            content: "";
-            position: absolute;
-            background-color: $tertiary-color;
-            width: 10%;
-            height: 3px;
-            top: 1.5rem;
-            left: 0;
-            transform: translateX(1.2rem);
-
-        }
-        
+    & p {
+      font-weight: bold;
+      letter-spacing: 0.02rem;
     }
-    
-    & article {
+  }
 
-        display: flex;  
-        background-color: white;
-        border-radius: 15px;
-        box-shadow: $box-shadow;
-        cursor: pointer;
-        overflow: hidden;
-        margin: 1rem;
-        opacity:0;
-        animation: transition 1.5s ease-out 0.8s forwards;
-   
-        
-        &:hover > .menu-card__select {
-            flex: 2;
-            transform: translateX(0); 
-            opacity: 1;
-            width: 60px;
-            & > span {
-                
-                transform: rotate(360deg);
-            }
-            
-        }
-        
-    }
-    
-
-    &__content {
-        position: relative;
-        // border: 1px solid pink;
-        max-width: 95%;
-        height: 60px;
-        padding: 0.56rem;
-        display: flex;
-        gap: 3%;
-        flex: 10;
-       
-        flex-direction: column;
-        justify-content: flex-end;
-        overflow: hidden; 
-        white-space: nowrap;
-        
-        
-        
-  
-        & p {
-            font-weight: bold;
-            letter-spacing: 0.02rem;
-            
-            
-            
-        } 
-                    
+  &__txt-price {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    & p {
+      padding-left: 0.3rem;
     }
 
-    &__txt-price {
-        
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        & p {
-            padding-left: 0.3rem;
-        }
-
-        & span {
-            font-size: $font-size-less;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-        
-        
-       
-        
+    & span {
+      font-size: 0.9em;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
+  }
 
-    &__select {
-        background-color: $tertiary-color;
-        border-radius: 0 15px 15px 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex: 0;
-        width: 0px;
-        opacity: 0;
-        transition: all 0.6s ease-in-out;
-        transform: rotate(0);
-        
-        & > span {
-            color:white;
-            
-        transform: rotate(-90deg);
-            transition: transform 0.7s ease-in-out;
-           
+  &__select {
+    background-color: $tertiary-color;
+    border-radius: 0 15px 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0;
+    width: 0px;
+    opacity: 0;
+    transition: all 0.6s ease-in-out;
+    transform: rotate(0);
 
-        }
+    & > span {
+      color: white;
 
+      transform: rotate(-90deg);
+      transition: transform 0.7s ease-in-out;
     }
-    @media only screen and (min-width:768px) {
-        width: 70%;
-
-    }
-    @media only screen and (min-width:960px) {
-        width: 45%;
-    }
+  }
+  @media only screen and (min-width: 768px) {
+    width: 70%;
+  }
+  @media only screen and (min-width: 960px) {
+    width: 45%;
+  }
+  @media only screen and (min-width: 1244px) {
+    width: 28%;
+  }
 }
 .menu__footer {
-    display: flex;
-    justify-content: center;
-    padding-top: 1rem;
-    padding-bottom: 3.7rem;
-
+  display: flex;
+  justify-content: center;
+  padding-top: 1rem;
+  padding-bottom: 3.7rem;
 }
 @keyframes transition {
-    0%   { 
-        margin-bottom: 2rem;
-        opacity:0; 
-    }
-    100% { 
-        margin-bottom: 0;
-        opacity:1; }
-    }
-    
+  0% {
+    margin-bottom: 2rem;
+    opacity: 0;
+  }
+  100% {
+    margin-bottom: 0;
+    opacity: 1;
+  }
+}
