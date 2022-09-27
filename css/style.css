@@ -50,6 +50,11 @@ body {
   width: 100vw;
   margin: auto;
 }
+@media only screen and (min-width: 1800px) {
+  body {
+    width: 1800px;
+  }
+}
 
 main {
   display: flex;
@@ -260,7 +265,7 @@ main {
   align-items: center;
   justify-content: center;
   z-index: 10;
-  animation: loadingscreen 0.1s linear 0.1s forwards;
+  animation: loadingscreen 0.1s linear 3s forwards;
   cursor: wait;
 }
 .loader-wrapper > i {
