@@ -1,3 +1,56 @@
+//Loading//
+
+.loader-wrapper {
+  background: white;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  animation: loadingscreen 0.1s linear 3s forwards;
+  cursor: wait;
+  & > i {
+    color: $primary-color;
+    font-size: 2em;
+    position: absolute;
+    animation: heartbit 2s infinite backwards;
+  }
+}
+.loading-spinner {
+  position: relative;
+  width: 7em;
+  height: 7em;
+  display: inline-block;
+  vertical-align: middle;
+
+  border-radius: 50%;
+  border: 5px solid transparent;
+  border-top-color: $tertiary-color;
+  animation: loadcircle 2s linear 0s infinite;
+  &:before {
+    content: "";
+    position: absolute;
+    inset: 5px;
+
+    border-radius: 50%;
+    border: 5px solid transparent;
+    border-top-color: $primary-color;
+    animation: loadcircle 2s linear 0s infinite;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    inset: 12px;
+
+    border-radius: 50%;
+    border: 5px solid transparent;
+    border-top-color: $secondary-color;
+    animation: loadcircle 3s linear 0s infinite;
+  }
+}
+
 // section search //
 .section-search {
   display: flex;
@@ -181,5 +234,49 @@
   }
   @media only screen and (min-width: 1500px) {
     max-width: 20%;
+  }
+}
+@keyframes loadingscreen {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@keyframes loadcircle {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes heartbit {
+  0% {
+    transform: scale(0);
+    opacity: 0.5;
+    color: $primary-color;
+  }
+  25% {
+    opacity: 0.8;
+    color: $tertiary-color;
+  }
+  50% {
+    transform: scale(1);
+    opacity: 1;
+    color: $primary-color;
+  }
+  75% {
+    opacity: 0.8;
+    color: $secondary-color;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0.5;
+    color: $primary-color;
   }
 }
