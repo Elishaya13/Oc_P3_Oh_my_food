@@ -12,7 +12,7 @@
     margin-top: 0.8rem;
   }
 
-  @media only screen and (max-width: 1023px) {
+  @media only screen and (max-width: 960px) {
     position: sticky;
     top: 0;
     background-color: white;
@@ -51,6 +51,7 @@
       font-size: 22px;
       border: none;
       margin-top: 0.8rem;
+      cursor: pointer;
     }
   }
 }
