@@ -220,9 +220,6 @@ main {
 .resto-card__heart:hover .full-heart {
   opacity: 100%;
 }
-.resto-card__heart.menu__heart {
-  flex: 1;
-}
 .resto-card__heart.menu__heart .full-heart,
 .resto-card__heart.menu__heart .empty-heart {
   font-size: 29px;
@@ -488,12 +485,6 @@ main {
   }
   .menu__header h2 {
     padding-left: 0;
-  }
-}
-@media only screen and (min-width: 1244px) {
-  .menu__header h2 {
-    justify-content: center;
-    flex: 28;
   }
 }
 
