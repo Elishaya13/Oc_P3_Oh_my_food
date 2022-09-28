@@ -36,7 +36,6 @@
     content: "";
     position: absolute;
     inset: 5px;
-
     border-radius: 50%;
     border: 5px solid transparent;
     border-top-color: $primary-color;
@@ -47,7 +46,6 @@
     content: "";
     position: absolute;
     inset: 12px;
-
     border-radius: 50%;
     border: 5px solid transparent;
     border-top-color: $secondary-color;
@@ -58,10 +56,7 @@
 // section search //
 .section-search {
   display: flex;
-
   flex-direction: column;
- // width: 100%;
-  //position: relative;
 
   &__location {
     height: 50px;
@@ -74,16 +69,9 @@
 
     & span {
       padding-right: 10%;
-      //font-size: $font-size-medium;
     }
 
     @media only screen and (min-width: 768px) {
-      //width: 100%;
-      //height: 50px;
-      //position: relative;
-      //display: flex;
-      //
-      //text-align: center;
       & span {
         padding: 1em;
       }
@@ -105,10 +93,8 @@
     }
 
     & h2 {
-      //width: 70%;
-      //font-weight: bold;
       letter-spacing: -0.8px;
-      //Responsive
+
       @media only screen and (min-width: 768px) {
         & > br {
           display: none;
@@ -121,6 +107,7 @@
       font-size: $font-size-medmore;
       opacity: 0.75;
       padding: 4% 0 7% 0;
+
       @media only screen and (min-width: 1244px) {
         padding: 2% 0 3% 0;
       }
@@ -208,7 +195,6 @@
 
   & img {
     border-radius: 15px 15px 0 0;
-    //width: 100%;
     height: 70%;
     object-fit: cover;
   }
@@ -245,7 +231,6 @@
 
     &__txt {
       width: 70%;
-      //height: 100%;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -292,39 +277,32 @@
 
 @keyframes hourglass {
   0% {
-    //transform: scale(0);
     opacity: 1;
     color: $primary-color;
   }
   15% {
-   // transform: scale(1);
     opacity: 0.8;
     color: $tertiary-color;
   }
   30% {
-    //transform: scale(1);
     opacity: 1;
     color: $secondary-color;
   }
   45% {
-    //transform: scale(0);
     opacity: 0.8;
     color: $primary-color;
 
   }
   60% {
-    //transform: scale(0);
     opacity: 1;
     color: $tertiary-color;
 
   }
   75% {
-    //transform: scale(0);
     opacity: 0.8;
     color: $secondary-color;
   }
   100% {
-   //transform: scale(1);
     opacity: 1;
     color: $primary-color;
   }

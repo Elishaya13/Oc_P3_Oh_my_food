@@ -5,7 +5,6 @@
   border: none;
   font-size: $font-size-medium;
   color: white;
-  background: $secondary-color;
   background: linear-gradient(180deg, $secondary-color 0%, $primary-color 100%);
   box-shadow: $box-shadow;
   -webkit-box-shadow: $box-shadow;
@@ -30,7 +29,6 @@
   width: 85%;
   height: 18%;
   margin-left: 3%;
-  //margin-right: 6%;
   background-color: $background-color;
   font-weight: $font-weight-medium;
   display: flex;
@@ -72,12 +70,12 @@
     }
   }
 
-  //Responsiv tablet
+  //Responsive tablet
   @media only screen and (min-width: 768px) {
     width: 55%;
     margin: 0;
   }
-  //Responsiv desktop and large desktop
+  //Responsive desktop and large desktop
   @media only screen and (min-width: 960px) {
     width: 40%;
   }
