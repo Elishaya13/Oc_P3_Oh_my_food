@@ -72,7 +72,7 @@ main {
 .header h1 {
   margin-top: 0.8rem;
 }
-@media only screen and (max-width: 960px) {
+@media only screen and (max-width: 1024px) {
   .header {
     position: sticky;
     top: 0;
@@ -112,8 +112,8 @@ main {
 
 .btn-search {
   width: 220px;
-  height: 7vh;
-  border-radius: 24px;
+  height: 6vh;
+  border-radius: 30px;
   border: none;
   font-size: 1em;
   color: white;
@@ -133,7 +133,7 @@ main {
     height: 6vh;
   }
 }
-@media only screen and (min-width: 1244px) {
+@media only screen and (min-width: 1024px) {
   .btn-search {
     border-radius: 30px;
   }
@@ -185,12 +185,12 @@ main {
     margin: 0;
   }
 }
-@media only screen and (min-width: 960px) {
+@media only screen and (min-width: 1024px) {
   .btn-fct {
     width: 40%;
   }
 }
-@media only screen and (min-width: 1244px) {
+@media only screen and (min-width: 1440px) {
   .btn-fct {
     height: 25%;
     width: 30%;
@@ -227,28 +227,29 @@ main {
   font-size: 29px;
   right: 1.5em;
 }
+@media only screen and (max-width: 374px) {
+  .resto-card__heart.menu__heart .full-heart,
+.resto-card__heart.menu__heart .empty-heart {
+    font-size: 25px;
+    right: 3%;
+  }
+}
 @media only screen and (min-width: 768px) {
   .resto-card__heart.menu__heart .full-heart,
 .resto-card__heart.menu__heart .empty-heart {
     right: 22%;
   }
 }
-@media only screen and (min-width: 960px) {
+@media only screen and (min-width: 1024px) {
   .resto-card__heart.menu__heart .full-heart,
 .resto-card__heart.menu__heart .empty-heart {
     right: 25%;
   }
 }
-@media only screen and (min-width: 1244px) {
+@media only screen and (min-width: 1440px) {
   .resto-card__heart.menu__heart .full-heart,
 .resto-card__heart.menu__heart .empty-heart {
     right: 35%;
-  }
-}
-@media only screen and (min-width: 1500px) {
-  .resto-card__heart.menu__heart .full-heart,
-.resto-card__heart.menu__heart .empty-heart {
-    right: 39%;
   }
 }
 
@@ -263,6 +264,11 @@ main {
   z-index: 10;
   animation: loadingscreen 0.1s linear 3s forwards;
   cursor: wait;
+}
+@media only screen and (min-width: 1800px) {
+  .loader-wrapper {
+    width: 1800px;
+  }
 }
 .loader-wrapper > i {
   color: #9356dc;
@@ -332,7 +338,7 @@ main {
   align-items: center;
   padding-bottom: 5%;
 }
-@media only screen and (min-width: 1244px) {
+@media only screen and (min-width: 1024px) {
   .section-search__info {
     padding: 0;
   }
@@ -351,7 +357,7 @@ main {
   opacity: 0.75;
   padding: 4% 0 7% 0;
 }
-@media only screen and (min-width: 1244px) {
+@media only screen and (min-width: 1024px) {
   .section-search__info p {
     padding: 2% 0 3% 0;
   }
@@ -377,16 +383,18 @@ main {
     text-align: center;
   }
 }
-@media only screen and (min-width: 960px) {
+@media only screen and (min-width: 1024px) {
   .section-fonction {
     flex-direction: row;
     flex-wrap: wrap;
+    padding-bottom: 0;
+    height: 30vh;
   }
 }
-@media only screen and (min-width: 1244px) {
+@media only screen and (min-width: 1440px) {
   .section-fonction {
     padding: 0 2% 0 2%;
-    height: 30vh;
+    height: 25vh;
   }
 }
 
@@ -412,7 +420,12 @@ main {
   }
   .section-restaurant h2 {
     text-align: center;
-    margin-top: 5%;
+    margin-top: 3%;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .section-restaurant {
+    padding-bottom: 0;
   }
 }
 
@@ -486,12 +499,12 @@ main {
     width: 40%;
   }
 }
-@media only screen and (min-width: 1244px) {
+@media only screen and (min-width: 1024px) {
   .resto-card {
     width: 35%;
   }
 }
-@media only screen and (min-width: 1500px) {
+@media only screen and (min-width: 1440px) {
   .resto-card {
     max-width: 20%;
   }
@@ -573,7 +586,7 @@ main {
     justify-content: center;
   }
 }
-@media only screen and (min-width: 960px) {
+@media only screen and (min-width: 1024px) {
   .menu__header {
     border-radius: 0;
     margin-top: 2em;
@@ -591,7 +604,7 @@ main {
     align-items: center;
   }
 }
-@media only screen and (min-width: 960px) {
+@media only screen and (min-width: 1024px) {
   .menu__body {
     flex-direction: row;
     justify-content: center;
@@ -691,12 +704,12 @@ main {
     width: 70%;
   }
 }
-@media only screen and (min-width: 960px) {
+@media only screen and (min-width: 1024px) {
   .menu-card {
     width: 45%;
   }
 }
-@media only screen and (min-width: 1244px) {
+@media only screen and (min-width: 1440px) {
   .menu-card {
     width: 28%;
   }
@@ -773,7 +786,7 @@ footer div a i {
     padding-right: 0.5rem;
   }
 }
-@media only screen and (min-width: 960px) {
+@media only screen and (min-width: 1024px) {
   footer > div {
     align-items: flex-end;
     justify-content: space-between;
